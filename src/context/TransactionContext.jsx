@@ -160,22 +160,11 @@ export function TransactionProvider({ children }) {
     return (bank.initialBalance || 0) + bankIncome - bankExpense;
   }, [transactions, banks]);
 
-  // Total balance across all banks (initial balances + tx flow)
+  // Total balance = ONLY sum of each bank's balance (initialBalance + bank-assigned tx)
+  // Unassigned (old) transactions are intentionally excluded so they don't inflate the total
   const totalBankBalance = useMemo(() => {
-    const banksTotal = banks.reduce((sum, bank) => {
-      return sum + getBankBalance(bank.id);
-    }, 0);
-
-    // Include unassigned transaction balance
-    const unassignedIncome = transactions
-      .filter(tx => !tx.bankId && tx.type === 'income')
-      .reduce((sum, tx) => sum + tx.amount, 0);
-    const unassignedExpense = transactions
-      .filter(tx => !tx.bankId && tx.type === 'expense')
-      .reduce((sum, tx) => sum + tx.amount, 0);
-
-    return banksTotal + unassignedIncome - unassignedExpense;
-  }, [transactions, banks, getBankBalance]);
+    return banks.reduce((sum, bank) => sum + getBankBalance(bank.id), 0);
+  }, [banks, getBankBalance]);
 
   // Filter by period
   const getFilteredTransactions = useCallback((period = 'all') => {
