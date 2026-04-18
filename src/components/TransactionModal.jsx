@@ -90,25 +90,28 @@ export default function TransactionModal({ onClose, showToast }) {
             />
           </div>
 
-          {/* Bank Selection */}
-          {banks.length > 0 && (
-            <div className="form-group">
-              <label>{t('selectBankAccount')}</label>
-              <select
-                className="form-input"
-                value={bankId}
-                onChange={(e) => setBankId(e.target.value)}
-                id="input-bank-select"
-              >
-                <option value="">{t('noBankSelected')}</option>
-                {banks.map(bank => (
-                  <option key={bank.id} value={bank.id}>
-                    {bank.name} {bank.lastFour ? `•••• ${bank.lastFour}` : ''}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
+          {/* Bank Selection - always shown */}
+          <div className="form-group">
+            <label>{t('selectBankAccount')}</label>
+            <select
+              className="form-input"
+              value={bankId}
+              onChange={(e) => setBankId(e.target.value)}
+              id="input-bank-select"
+            >
+              <option value="">{t('noBankSelected')}</option>
+              {banks.map(bank => (
+                <option key={bank.id} value={bank.id}>
+                  {bank.name} {bank.lastFour ? `•••• ${bank.lastFour}` : ''}
+                </option>
+              ))}
+            </select>
+            {banks.length === 0 && (
+              <p style={{ fontSize: '11px', color: 'var(--text-tertiary)', marginTop: '5px' }}>
+                💡 {t('noBanksHint')}
+              </p>
+            )}
+          </div>
 
           {/* Date */}
           <div className="form-group">

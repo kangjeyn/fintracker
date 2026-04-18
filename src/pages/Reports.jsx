@@ -3,15 +3,22 @@ import { motion } from 'framer-motion';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Filler } from 'chart.js';
 import { Doughnut, Bar, Line } from 'react-chartjs-2';
 import { useLang } from '../context/LanguageContext.jsx';
+import { useTheme } from '../context/ThemeContext.jsx';
 import { useTransactions } from '../context/TransactionContext.jsx';
-import { CATEGORIES, CHART_COLORS } from '../utils/formatters.js';
+import { CATEGORIES } from '../utils/formatters.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Filler);
 
 export default function Reports() {
   const { t } = useLang();
+  const { isDark } = useTheme();
   const { transactions, getFilteredTransactions } = useTransactions();
   const [period, setPeriod] = useState('all');
+
+  // Adaptive colors based on theme
+  const textColor = isDark ? '#e2e8f0' : '#1e293b';
+  const subTextColor = isDark ? '#94a3b8' : '#475569';
+  const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)';
 
   const filtered = getFilteredTransactions(period);
 
@@ -111,7 +118,7 @@ export default function Reports() {
       legend: {
         position: 'bottom',
         labels: {
-          color: 'var(--text-secondary)',
+          color: textColor,
           font: { family: 'Outfit', size: 12 },
           padding: 16,
           usePointStyle: true,
@@ -132,16 +139,16 @@ export default function Reports() {
   const barOptions = {
     ...chartOptions,
     scales: {
-      x: { ticks: { color: '#94a3b8', font: { family: 'Outfit', size: 11 } }, grid: { display: false } },
-      y: { ticks: { color: '#94a3b8', font: { family: 'Outfit', size: 11 } }, grid: { color: 'rgba(255,255,255,0.05)' } }
+      x: { ticks: { color: subTextColor, font: { family: 'Outfit', size: 11 } }, grid: { display: false } },
+      y: { ticks: { color: subTextColor, font: { family: 'Outfit', size: 11 } }, grid: { color: gridColor } }
     }
   };
 
   const lineOptions = {
     ...chartOptions,
     scales: {
-      x: { ticks: { color: '#94a3b8', font: { family: 'Outfit', size: 10 }, maxRotation: 45 }, grid: { display: false } },
-      y: { ticks: { color: '#94a3b8', font: { family: 'Outfit', size: 11 } }, grid: { color: 'rgba(255,255,255,0.05)' } }
+      x: { ticks: { color: subTextColor, font: { family: 'Outfit', size: 10 }, maxRotation: 45 }, grid: { display: false } },
+      y: { ticks: { color: subTextColor, font: { family: 'Outfit', size: 11 } }, grid: { color: gridColor } }
     }
   };
 

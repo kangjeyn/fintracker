@@ -8,7 +8,8 @@ export default function BalanceCard() {
   const { t } = useLang();
   const { balance, totalIncome, totalExpense, hideBalance, toggleHideBalance, banks, totalBankBalance } = useTransactions();
 
-  // Use totalBankBalance if user has banks, otherwise use raw transaction balance
+  // For existing users: if no banks → use raw transaction balance
+  // If banks exist → totalBankBalance (bank initial balances + all transactions)
   const displayBalance = banks.length > 0 ? totalBankBalance : balance;
 
   return (

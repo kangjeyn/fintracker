@@ -30,6 +30,7 @@ const id = {
   manageBanks: 'Kelola Bank',
   selectBankAccount: 'Rekening Bank',
   noBankSelected: 'Tanpa bank',
+  noBanksHint: 'Tambah bank di Beranda → Kartu Tersimpan terlebih dahulu.',
 
   // Transactions
   allTransactions: 'Semua Transaksi',

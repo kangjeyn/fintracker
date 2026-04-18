@@ -30,6 +30,7 @@ const en = {
   manageBanks: 'Manage Banks',
   selectBankAccount: 'Bank Account',
   noBankSelected: 'No bank',
+  noBanksHint: 'Add a bank from Home → Saved Cards first.',
 
   // Transactions
   allTransactions: 'All Transactions',
