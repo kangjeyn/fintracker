@@ -1,0 +1,161 @@
+const en = {
+  // Header
+  greeting: 'Hello',
+  subtitle: 'Track your finances smartly',
+
+  // Dashboard
+  totalBalance: 'Total Available Balance',
+  income: 'Income',
+  expense: 'Expense',
+  recentHistory: 'Recent History',
+  noTransactions: 'No transactions yet. Tap + to start tracking!',
+  seeAll: 'See All',
+  savedCards: 'Saved Cards',
+  availableBalance: 'Available Balance',
+
+  // Banks
+  addBank: 'Add Bank',
+  selectBank: 'Select Bank / E-Wallet',
+  bankNameCustom: 'Bank / E-Wallet Name',
+  bankNamePlaceholder: 'e.g. SeaBank, Blu, etc',
+  lastFourDigits: 'Last 4 Card Digits',
+  initialBalance: 'Initial Balance',
+  initialBalanceHint: 'Enter the current balance in this account.',
+  bankAdded: 'Bank added successfully!',
+  bankDeleted: 'Bank deleted successfully!',
+  bankUpdated: 'Bank balance updated!',
+  allBanks: 'All Banks',
+  noBanks: 'No banks yet. Add one from Home.',
+  deleteBankConfirm: 'Delete {name}? Related transactions won\'t be deleted.',
+  manageBanks: 'Manage Banks',
+  selectBankAccount: 'Bank Account',
+  noBankSelected: 'No bank',
+
+  // Transactions
+  allTransactions: 'All Transactions',
+  transactionsCount: 'transactions',
+
+  // Transaction Modal
+  addTransaction: 'Add Transaction',
+  expenseLabel: 'Expense',
+  incomeLabel: 'Income',
+  amount: 'Amount (Rp)',
+  amountPlaceholder: 'e.g. 50000',
+  category: 'Category',
+  note: 'Note',
+  notePlaceholder: 'Lunch at restaurant...',
+  date: 'Date',
+  save: 'Save Transaction',
+  deleteConfirm: 'Delete this transaction?',
+
+  // Categories
+  catFood: 'Food',
+  catTransport: 'Transport',
+  catShopping: 'Shopping',
+  catBills: 'Bills',
+  catEntertainment: 'Entertainment',
+  catSalary: 'Salary',
+  catHealth: 'Health',
+  catEducation: 'Education',
+  catInvestment: 'Investment',
+  catOther: 'Other',
+
+  // Reports
+  expenseAnalysis: 'Expense Analysis',
+  incomeAnalysis: 'Income Analysis',
+  monthlyTrend: 'Monthly Trend',
+  chartDescription: 'The chart shows your financial distribution by category.',
+  noExpenseData: 'No expense data to display yet.',
+  filterDay: 'Day',
+  filterWeek: 'Week',
+  filterMonth: 'Month',
+  filterAll: 'All',
+
+  // Insight Page
+  insightTitle: 'AI Insights',
+  insightSubtitle: 'Your curated financial health summary.',
+  budgetGuideline: '50/30/20 Guideline',
+  budgetNeeds: 'Needs',
+  budgetWants: 'Wants',
+  budgetSavings: 'Savings & Debt',
+  insightNoIncome: 'Record this month\'s income to calculate your 50/30/20 budget.',
+  insightEmpty: 'Start recording transactions to see your financial insights.',
+  askAiAdvisor: 'Ask AI Advisor',
+  askAiDesc: 'Discuss your financial health & get personalized strategies.',
+  active: 'Active',
+  curatedObservations: 'Curated Observations',
+
+  // AI Advisor
+  aiWelcome: 'Hello! I\'m your AI Advisor. Ready to analyze your spending habits and give savings tips. Feel free to ask! (Make sure API Key is set in Settings).',
+  aiPlaceholder: 'Ask for financial advice...',
+  aiNoKey: 'Please set your Gemini API Key first in Settings.',
+  aiError: 'Failed to contact AI. Check your connection or API Key.',
+  aiThinking: 'Thinking...',
+
+  // Settings
+  settingsTitle: 'Settings & Integration',
+  apiKeyLabel: 'Google Gemini API Key',
+  apiKeyPlaceholder: 'AIzaSy...',
+  apiKeyHint: 'API Key is stored securely in your local browser. Get it free at Google AI Studio.',
+  saveApiKey: 'Save API Key',
+  apiKeySaved: 'API Key saved successfully!',
+  webhookLabel: 'Google Sheet Webhook URL',
+  webhookPlaceholder: 'https://script.google.com/macros/s/...',
+  syncSheet: 'Sync to Spreadsheet',
+  webhookSaved: 'Webhook URL saved successfully!',
+  clearAll: 'Clear All Data',
+  clearConfirm: 'Are you sure you want to delete all transaction data? This cannot be undone.',
+  clearSuccess: 'Data cleared successfully!',
+  darkMode: 'Dark Mode',
+  lightMode: 'Light Mode',
+  language: 'Language',
+  exportPdf: 'Export PDF Report',
+  exportSuccess: 'Report exported successfully!',
+  dataManagement: 'Data Management',
+  exportJson: 'Backup Data (JSON)',
+  importJson: 'Restore Data (JSON)',
+  exportJsonSuccess: 'Backup downloaded successfully!',
+  importSuccess: 'Data restored successfully! App will reload...',
+  importError: 'Invalid file. Please select a valid FinTracker backup file.',
+  importConfirm: 'This will replace all current data. Continue?',
+  installApp: 'Install App',
+  installHint: 'Open browser menu → "Add to Home Screen" to install.',
+
+  // Budget
+  budgetTitle: 'Budget Limits',
+  budgetSet: 'Set Limit',
+  budgetPlaceholder: 'Enter budget limit...',
+  budgetExceeded: 'Budget limit exceeded!',
+  budgetRemaining: 'Remaining budget',
+  budgetUsed: 'Used',
+  noBudget: 'No budget set. Set limits per category.',
+
+  // Navigation
+  navHome: 'Home',
+  navReports: 'Reports',
+  navInsight: 'Insight',
+  navSettings: 'Settings',
+
+  // Onboarding
+  onboardTitle1: 'Welcome! 👋',
+  onboardDesc1: 'FinTracker helps you record and analyze your personal finances easily.',
+  onboardTitle2: 'Track Finances 📝',
+  onboardDesc2: 'Quickly add your daily income and expenses.',
+  onboardTitle3: 'Smart Analysis 📊',
+  onboardDesc3: 'View visual reports & get AI-powered advice for better money management.',
+  onboardTitle4: 'Who Are You? 🙋',
+  onboardDesc4: 'Enter your name so we can greet you warmly!',
+  onboardNamePlaceholder: 'Type your name here...',
+  onboardStart: 'Get Started',
+  onboardNext: 'Next',
+  onboardSkip: 'Skip',
+
+  // General
+  user: 'User',
+  cancel: 'Cancel',
+  confirm: 'Confirm',
+  today: 'Today',
+  yesterday: 'Yesterday',
+};
+
+export default en;

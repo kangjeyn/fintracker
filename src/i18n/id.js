@@ -1,0 +1,161 @@
+const id = {
+  // Header
+  greeting: 'Halo',
+  subtitle: 'Pantau keuanganmu dengan cerdas',
+
+  // Dashboard
+  totalBalance: 'Total Saldo Tersedia',
+  income: 'Pemasukan',
+  expense: 'Pengeluaran',
+  recentHistory: 'Riwayat Terbaru',
+  noTransactions: 'Belum ada transaksi. Tekan + untuk mulai mencatat!',
+  seeAll: 'Lihat Semua',
+  savedCards: 'Kartu Tersimpan',
+  availableBalance: 'Saldo Tersedia',
+
+  // Banks
+  addBank: 'Tambah Bank',
+  selectBank: 'Pilih Bank / E-Wallet',
+  bankNameCustom: 'Nama Bank / E-Wallet',
+  bankNamePlaceholder: 'Contoh: SeaBank, Blu, dll',
+  lastFourDigits: '4 Digit Terakhir Kartu',
+  initialBalance: 'Saldo Awal',
+  initialBalanceHint: 'Masukkan saldo saat ini di rekening tersebut.',
+  bankAdded: 'Bank berhasil ditambahkan!',
+  bankDeleted: 'Bank berhasil dihapus!',
+  bankUpdated: 'Saldo bank diperbarui!',
+  allBanks: 'Semua Bank',
+  noBanks: 'Belum ada bank. Tambahkan dari Beranda.',
+  deleteBankConfirm: 'Hapus {name}? Transaksi terkait tidak akan dihapus.',
+  manageBanks: 'Kelola Bank',
+  selectBankAccount: 'Rekening Bank',
+  noBankSelected: 'Tanpa bank',
+
+  // Transactions
+  allTransactions: 'Semua Transaksi',
+  transactionsCount: 'transaksi',
+
+  // Transaction Modal
+  addTransaction: 'Catat Transaksi',
+  expenseLabel: 'Pengeluaran',
+  incomeLabel: 'Pemasukan',
+  amount: 'Nominal (Rp)',
+  amountPlaceholder: 'Contoh: 50000',
+  category: 'Kategori',
+  note: 'Catatan',
+  notePlaceholder: 'Makan siang di warteg...',
+  date: 'Tanggal',
+  save: 'Simpan Transaksi',
+  deleteConfirm: 'Hapus transaksi ini?',
+
+  // Categories
+  catFood: 'Makanan',
+  catTransport: 'Transportasi',
+  catShopping: 'Belanja',
+  catBills: 'Tagihan',
+  catEntertainment: 'Hiburan',
+  catSalary: 'Gaji',
+  catHealth: 'Kesehatan',
+  catEducation: 'Pendidikan',
+  catInvestment: 'Investasi',
+  catOther: 'Lainnya',
+
+  // Reports
+  expenseAnalysis: 'Analisis Pengeluaran',
+  incomeAnalysis: 'Analisis Pemasukan',
+  monthlyTrend: 'Tren Bulanan',
+  chartDescription: 'Grafik menunjukkan distribusi keuangan Anda per kategori.',
+  noExpenseData: 'Belum ada data pengeluaran untuk ditampilkan.',
+  filterDay: 'Hari',
+  filterWeek: 'Minggu',
+  filterMonth: 'Bulan',
+  filterAll: 'Semua',
+
+  // Insight Page
+  insightTitle: 'AI Insights',
+  insightSubtitle: 'Ringkasan kesehatan keuanganmu.',
+  budgetGuideline: 'Pedoman 50/30/20',
+  budgetNeeds: 'Kebutuhan',
+  budgetWants: 'Keinginan',
+  budgetSavings: 'Tabungan & Utang',
+  insightNoIncome: 'Catat pemasukan bulan ini agar budgeting 50/30/20 bisa dihitung.',
+  insightEmpty: 'Mulai catat transaksi untuk melihat insight keuanganmu.',
+  askAiAdvisor: 'Tanya AI Advisor',
+  askAiDesc: 'Diskusikan kondisi keuangan & dapatkan saran personal.',
+  active: 'Aktif',
+  curatedObservations: 'Observasi Keuangan',
+
+  // AI Advisor
+  aiWelcome: 'Halo! Saya AI Advisor kamu. Siap memberikan analisis kebiasaan belanja atau tips berhemat. Silakan bertanya! (Pastikan API Key sudah diset di Pengaturan).',
+  aiPlaceholder: 'Minta saran berhemat dari dataku...',
+  aiNoKey: 'Silakan atur Gemini API Key terlebih dahulu di menu Pengaturan.',
+  aiError: 'Gagal menghubungi AI. Periksa koneksi atau API Key Anda.',
+  aiThinking: 'Sedang berpikir...',
+
+  // Settings
+  settingsTitle: 'Pengaturan & Integrasi',
+  apiKeyLabel: 'Google Gemini API Key',
+  apiKeyPlaceholder: 'AIzaSy...',
+  apiKeyHint: 'API Key disimpan aman di browser lokal. Dapatkan gratis di Google AI Studio.',
+  saveApiKey: 'Simpan API Key',
+  apiKeySaved: 'API Key berhasil disimpan!',
+  webhookLabel: 'Google Sheet Webhook URL',
+  webhookPlaceholder: 'https://script.google.com/macros/s/...',
+  syncSheet: 'Sync ke Spreadsheet',
+  webhookSaved: 'Webhook URL berhasil disimpan!',
+  clearAll: 'Hapus Semua Data',
+  clearConfirm: 'Yakin ingin menghapus seluruh data transaksi? Tindakan ini tidak dapat dibatalkan.',
+  clearSuccess: 'Data berhasil dihapus!',
+  darkMode: 'Mode Gelap',
+  lightMode: 'Mode Terang',
+  language: 'Bahasa',
+  exportPdf: 'Ekspor Laporan PDF',
+  exportSuccess: 'Laporan berhasil diekspor!',
+  dataManagement: 'Kelola Data',
+  exportJson: 'Backup Data (JSON)',
+  importJson: 'Pulihkan Data (JSON)',
+  exportJsonSuccess: 'Backup berhasil diunduh!',
+  importSuccess: 'Data berhasil dipulihkan! App akan dimuat ulang...',
+  importError: 'File tidak valid. Pastikan file backup FinTracker yang benar.',
+  importConfirm: 'Ini akan mengganti semua data saat ini. Lanjutkan?',
+  installApp: 'Install Aplikasi',
+  installHint: 'Buka menu browser → "Add to Home Screen" untuk install.',
+
+  // Budget
+  budgetTitle: 'Batas Anggaran',
+  budgetSet: 'Atur Batas',
+  budgetPlaceholder: 'Masukkan batas anggaran...',
+  budgetExceeded: 'Batas anggaran terlampaui!',
+  budgetRemaining: 'Sisa anggaran',
+  budgetUsed: 'Terpakai',
+  noBudget: 'Belum ada anggaran. Atur batas per kategori.',
+
+  // Navigation
+  navHome: 'Beranda',
+  navReports: 'Laporan',
+  navInsight: 'Insight',
+  navSettings: 'Pengaturan',
+
+  // Onboarding
+  onboardTitle1: 'Selamat Datang! 👋',
+  onboardDesc1: 'FinTracker membantu Anda mencatat dan menganalisis keuangan pribadi dengan mudah.',
+  onboardTitle2: 'Catat Keuangan 📝',
+  onboardDesc2: 'Tambahkan pemasukan dan pengeluaran harian Anda dengan cepat.',
+  onboardTitle3: 'Analisis Cerdas 📊',
+  onboardDesc3: 'Lihat laporan visual & dapatkan saran dari AI untuk mengelola uang lebih baik.',
+  onboardTitle4: 'Siapa Kamu? 🙋',
+  onboardDesc4: 'Masukkan namamu agar kami bisa menyapamu dengan hangat!',
+  onboardNamePlaceholder: 'Ketik namamu di sini...',
+  onboardStart: 'Mulai Sekarang',
+  onboardNext: 'Lanjut',
+  onboardSkip: 'Lewati',
+
+  // General
+  user: 'Pengguna',
+  cancel: 'Batal',
+  confirm: 'Konfirmasi',
+  today: 'Hari Ini',
+  yesterday: 'Kemarin',
+};
+
+export default id;

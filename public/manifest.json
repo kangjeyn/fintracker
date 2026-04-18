@@ -1,0 +1,13 @@
+{
+  "name": "FinTracker",
+  "short_name": "FinTracker",
+  "description": "Smart personal finance tracker with AI advisor",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
